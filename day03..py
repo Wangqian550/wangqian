@@ -18,3 +18,11 @@ for url in lines:
         print(q)
         with open('%s,jpg','wb') as f:
             f.write(w.content)
+         
+         
+import  requests
+url='http://www.image-net.org/api/text/imagenet.synset.geturls?wnid=n02127808'
+response = requests.get(url)
+w = requests.get('http://www.copyright-free-pictures.org.uk/animals/big-cats/white-tiger.jpg')
+with open('%s.jpg','wb') as f:
+         f.write(w.content)
